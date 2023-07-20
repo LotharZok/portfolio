@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Inherited Fonts */
+@font-face {
+    font-family: Montserrat;
+    src: url(assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(assets/fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Baloo;
+    src: url(assets/fonts/Baloo2-Regular.ttf);
+}
+@font-face {
+    font-family: Baloo;
+    src: url(assets/fonts/Baloo2-Bold.ttf);
+    font-weight: bold;
+}
+
+/* Colour codes */
+:root {
+    --blue: #160266;
+    --lightblue: #5988ff;
+}
+
+/* Styles for all parts of the document */
+body {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+.roundBall {
+    background-image: radial-gradient(circle at 10% 10%, var(--lightblue), var(--blue));
+    border-radius: 50%;
+}
+
+.wh200 {
+    width: 200px;
+    height: 200px;
+}
+.wh80 {
+    width: 80px;
+    height: 80px;
+}
