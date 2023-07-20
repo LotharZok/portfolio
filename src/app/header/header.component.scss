@@ -1,3 +1,14 @@
 header {
-    background-color: var(--blue);
+    // background-color: var(--blue);
+    border: 1px solid red;
+
+    width: 100%;
+    max-width: 1440px;
+
+    // max-width: 900px;
+    img {
+        height: 69px;
+        margin-left: 100px;
+        margin-top: 24px;
+    }
 }

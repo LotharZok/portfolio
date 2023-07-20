@@ -23,7 +23,7 @@
 /* Colour codes */
 :root {
     --blue: #160266;
-    --lightblue: #5988ff;
+    --lightblue: #3704ff;
 }
 
 /* Styles for all parts of the document */
@@ -33,10 +33,15 @@ body {
 }
 
 .roundBall {
-    background-image: radial-gradient(circle at 10% 10%, var(--lightblue), var(--blue));
+    // background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #3704ff 6.25%, #3704ff 51.56%, #160266 100%);
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%);
     border-radius: 50%;
 }
 
+.wh892 {
+    width: 892px;
+    height: 892px;
+}
 .wh200 {
     width: 200px;
     height: 200px;
