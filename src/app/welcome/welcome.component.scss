@@ -1,29 +1,41 @@
+.welcomeGradient {
+    position: absolute;
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+    height: 988px;
+    width: 100%;
+    z-index: -2;
+}
+
+#ballHead {
+    position: absolute;
+    top: -75px;
+    left: -199px;
+    z-index: -1;
+}
+
 .welcomeContent {
-    border: 1px solid green;
-    // height: 959px;
+    // border: 1px solid green;
+    padding-top: 70px;
     display: flex;
 }
 
 .personImage {
-    border: 1px solid black;
+    // border: 1px solid black;
     width: 100%;
     margin-left: 30px;
-    // flex: 60%;
 
     img {
-        border: 1px solid blue;
-        // max-height: 100%;
+        // border: 1px solid blue;
         object-fit: cover;
     }
 }
 
 .welcomeText {
-    border: 1px solid lightgrey;
+    // border: 1px solid lightgrey;
     width: 100%;
     color: var(--lightblue);
     margin-top: 125px;
     margin-right: 100px;
-    // flex: 40%;
 
     display: flex;
     flex-direction: column;
@@ -46,7 +58,7 @@
     width: 100%;
     font-size: 23px;
     padding-top: 80px;
-    border: 1px solid red;
+    // border: 1px solid red;
 
     display: flex;
     flex-direction: column;
