@@ -27,13 +27,20 @@
 }
 
 /* Styles for all parts of the document */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Montserrat;
     margin: 0;
+    overflow-x: hidden;
+}
+
+* {
+    transition: all 0.2s ease-in-out;
 }
 
 .roundBall {
-    // background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #3704ff 6.25%, #3704ff 51.56%, #160266 100%);
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%);
     border-radius: 50%;
 }
