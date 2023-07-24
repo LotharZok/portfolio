@@ -1,0 +1,40 @@
+#togetherContent {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 32px;
+}
+
+.togetherHeader {
+    color: var(--lightblue);
+    margin-left: 100px;
+    font-family: baloo;
+    font-size: 120px;
+    font-weight: bold;
+    line-height: 120px;
+    flex-basis: 50%;
+}
+
+.togetherText {
+    font-size: 23px;
+    margin-right: 100px;
+    flex-basis: 50%;
+
+    .togetherBtn {
+        color: var(--lightblue);
+        cursor: pointer;
+        text-decoration: none;
+        align-self: center;
+
+        border: 2px solid var(--lightblue);
+        border-radius: 10px;
+        padding: 15px 30px;
+    }
+
+    .togetherBtn:hover {
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%);
+        color: white;
+        padding: 20px 35px;
+    }
+}

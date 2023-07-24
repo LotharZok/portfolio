@@ -1,0 +1,30 @@
+#skillContent {
+    padding: 100px 100px 50px 100px;
+    background: linear-gradient(128.94deg, #3704ff -33.96%, #3704ff 36.71%, #160266 112.25%);
+
+}
+
+.skillHeader {
+    font-family: baloo;
+    font-weight: bold;
+    font-size: 96px;
+    color: white;
+    text-align: center;
+}
+
+.skillList {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+.skillIconBox {
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
