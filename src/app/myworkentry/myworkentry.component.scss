@@ -19,7 +19,12 @@
     box-shadow: 5px 5px 15px 0px #00000026;
 }
 
+.entryImage:hover {
+    transform: translateY(-32px) scale(1.05);
+}
+
 .entryTextBox {
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -41,3 +46,32 @@
 .entryText {
     font-size: 16px;
 }
+
+.entryLinkButton {
+    margin-top: 50px;
+    font-size: 23px;
+
+    display: flex;
+
+    span {
+        width: 180px; /* ensures that the following element is not moving when the size changes while hovering */
+    }
+
+    .worksBtn {
+        color: var(--lightblue);
+        cursor: pointer;
+        text-decoration: none;
+        align-self: center;
+
+        border: 2px solid var(--lightblue);
+        border-radius: 10px;
+        padding: 15px 30px;
+    }
+
+    .worksBtn:hover {
+        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%);
+        color: white;
+        padding: 20px 35px;
+    }
+}
+

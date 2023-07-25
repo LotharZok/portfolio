@@ -34,8 +34,8 @@ export class MyworkComponent {
         },
         {
             'name': 'Pokemon Dex',
-            'skills': ['JavaScrip', 'HTML', 'CSS', 'Rest Api'],
-            'text': 'Using the PokéAPI this represents a simple library of all creatures of Pokemon. By clicking on a cart it shows further information.',
+            'skills': ['JavaScript', 'HTML', 'CSS', 'Rest Api'],
+            'text': 'Using the PokéAPI this represents a simple library of all creatures of Pokemon. By clicking on a cart it shows further information. Works in german, english, french, spanish and italian.',
             'link': 'https://github.com/LotharZok/pokedex',
             'image': '../../assets/img/screenshots/pokemon-dex.png',
             'row': 'odd'

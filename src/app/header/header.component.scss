@@ -8,6 +8,15 @@ header {
         margin-left: 100px;
         margin-top: 24px;
     }
+
+    a {
+        text-decoration: none;
+        color: var(--lightblue);
+
+        :visited {
+            color: var(--lightblue);
+        }
+    }
 }
 
 .menu {

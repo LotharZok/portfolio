@@ -1,0 +1,43 @@
+.contactHeader {
+    font-family: baloo;
+    font-size: 96px;
+    font-weight: bold;
+    color: var(--lightblue);
+    margin-left: 100px;
+}
+
+.contactMsgBlock {
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+.contactTextBlock {
+    margin-left: 100px;
+    flex-basis: 50%;
+}
+
+.contactTextHeader {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--lightblue);
+}
+
+.contactText {
+    font-size: 16px;
+}
+
+.contactTextFooter {
+    font-size: 16px;
+    color: var(--lightblue);
+
+    span {
+        font-family: baloo;
+        font-weight: bold;
+    }
+}
+
+.contactMsgForm {
+    margin-right: 100px;
+    flex-basis: 50%;
+}
