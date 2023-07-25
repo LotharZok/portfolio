@@ -1,0 +1,43 @@
+.entry {
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+}
+/* Hinzugefügte Regel, um die Reihenfolge zurückzusetzen */
+.roweven {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    .entryTextBox {
+        align-items: flex-end;
+    }
+}
+
+.entryImage {
+    width: 620px;
+    height: 400px;
+    box-shadow: 5px 5px 15px 0px #00000026;
+}
+
+.entryTextBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.entryTitle {
+    font-family: baloo;
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--lightblue);
+    margin-bottom: 25px;
+}
+
+.entrySkills {
+    font-size: 23px;
+    margin-bottom: 35px;
+}
+
+.entryText {
+    font-size: 16px;
+}

@@ -1,0 +1,16 @@
+<div class="entry row{{entry.row}}">
+    <div>
+        <img src="{{ entry.image }}" alt="" class="entryImage">
+    </div>
+    <div class="entryTextBox">
+        <div class="entryTitle">
+            {{ entry.name }}
+        </div>
+        <div class="entrySkills">
+            {{ entry.skills.join(' | ') }}
+        </div>
+        <div class="entryText">
+            {{ entry.text }}
+        </div>
+    </div>
+</div>

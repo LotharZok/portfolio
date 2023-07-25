@@ -42,6 +42,7 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
+/* Styles for Balls with gradients in different sizes */
 .roundBall {
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%);
     border-radius: 50%;
@@ -51,11 +52,44 @@ body {
     width: 892px;
     height: 892px;
 }
+.wh652 {
+    width: 652px;
+    height: 652px;
+}
+.wh393 {
+    width: 393px;
+    height: 393px;
+}
+.wh238 {
+    width: 238px;
+    height: 238px;
+}
 .wh200 {
     width: 200px;
     height: 200px;
+}
+.wh183 {
+    width: 183px;
+    height: 183px;
+}
+.wh109 {
+    width: 109px;
+    height: 109px;
+}
+.wh93 {
+    width: 93px;
+    height: 93px;
 }
 .wh80 {
     width: 80px;
     height: 80px;
 }
+.wh73 {
+    width: 73px;
+    height: 73px;
+}
+.wh51 {
+    width: 51px;
+    height: 51px;
+}
+/* END Styles for Balls */

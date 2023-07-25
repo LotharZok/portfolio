@@ -1,1 +1,11 @@
-<p>mywork works!</p>
+<div id="myworkContent">
+    <div class="myworkHeader">
+        My work
+    </div>
+    <div class="myworkText">
+        Here you'll find some examples of my work so far - please feel free to try them out.
+    </div>
+
+    <app-myworkentry *ngFor="let work of works;" [entry]="work"></app-myworkentry>
+    <!-- Why on earth do I get the class when the row is ood?? And not when it's even?? -->
+</div>

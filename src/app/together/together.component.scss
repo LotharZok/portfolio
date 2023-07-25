@@ -6,6 +6,17 @@
     gap: 32px;
 }
 
+.ball1 {
+    position: relative;
+    margin-top: -100px;
+    margin-left: 50%;
+}
+
+.ball2 {
+    position: relative;
+    margin-left: 75%;
+}
+
 .togetherHeader {
     color: var(--lightblue);
     margin-left: 100px;

@@ -1,7 +1,6 @@
 #skillContent {
     padding: 100px 100px 50px 100px;
     background: linear-gradient(128.94deg, #3704ff -33.96%, #3704ff 36.71%, #160266 112.25%);
-
 }
 
 .skillHeader {
@@ -10,6 +9,7 @@
     font-size: 96px;
     color: white;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .skillList {
@@ -21,10 +21,18 @@
 
 .skillIconBox {
     color: white;
+    width: 100px;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 8px;
+}
+
+.skillIconBox:hover .skillIcon {
+    transform: translateY(-10px);
+}
+.skillIconBox:hover .skillLabel {
+    font-weight: bold;
 }
