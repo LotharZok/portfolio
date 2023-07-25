@@ -14,16 +14,21 @@
                 Need a Frontend developer? <span>Contact me!</span>
             </div>
         </div>
-        <div class="contactMsgForm">
-            <div class="msgNameBox" class="inputContainer">
-                <input type="text" name="msgName" id="msgName" placeholder="Your name" class="">
-            </div>
-            <div class="msgEmailBox" class="inputContainer">
-                <input type="text" name="msgEmail" id="msgEmail" placeholder="Your email">
-            </div>
-            <div class="msgMessageBox" class="inputContainer">
-                <textarea name="msgMessage" id="msgMessage" cols="30" rows="10" placeholder="Your message"></textarea>
-            </div>
-        </div>
+        <!-- <div> -->
+            <!-- <form action="" (submit)="sendMail()" method="post" class="contactMsgForm"> -->
+            <form (submit)="sendMail()" ngNativeValidate #myForm class="contactMsgForm">
+                <div class="msgNameBox" class="inputContainer">
+                    <input type="text" name="name" id="msgName" required placeholder="Your name" class="" #nameField>
+                </div>
+                <div class="msgEmailBox" class="inputContainer">
+                    <input type="email" name="email" id="msgEmail" required placeholder="Your email" #emailField>
+                </div>
+                <div class="msgMessageBox" class="inputContainerTextarea">
+                    <textarea name="msgMessage" id="message" required cols="30" rows="3" placeholder="Your message" #messageField></textarea>
+                </div>
+                <button #sendButton>Say hello :)</button>
+            </form>
+            
+        <!-- </div> -->
     </div>
 </div>

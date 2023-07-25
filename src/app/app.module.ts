@@ -12,6 +12,8 @@ import { MyworkComponent } from './mywork/mywork.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContentComponent } from './content/content.component';
 import { MyworkentryComponent } from './myworkentry/myworkentry.component';
+import { FormsModule } from '@angular/forms';
+// inport { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MyworkentryComponent } from './myworkentry/myworkentry.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    // ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
