@@ -61,28 +61,21 @@ export class ContactComponent {
         let reqEmail = this.reqEmail.nativeElement;
         let reqMessage = this.reqMessage.nativeElement;
 
-        console.log('nameField:', nameField.value);
-        console.log('emailField:', emailField.value);
-        console.log('messageField:', messageField.value);
-
         let retValue: boolean = true;
 
         if (nameField.value == '') {
-            // alert('nameField ist leer');
             reqName.classList.remove('d-none');
             retValue = false;
         } else {
             reqName.classList.add('d-none');
         }
         if (emailField.value == '') {
-            // alert('emailField ist leer');
             reqEmail.classList.remove('d-none');
             retValue = false;
         } else {
             reqEmail.classList.add('d-none');
         }
         if (messageField.value == '') {
-            // alert('messageField ist leer');
             reqMessage.classList.remove('d-none');
             retValue = false;
         } else {
