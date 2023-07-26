@@ -30,9 +30,7 @@ export class ContactComponent {
         messageField.disabled = true;
         sendButton.disabled = true;
 
-        if (!this.checkFields(nameField, emailField, messageField)) {
-            alert('Fehler');
-        } else {
+        if (this.checkFields(nameField, emailField, messageField)) {
     
             // Animation anzeigen, daß gesendet wird
             
