@@ -20,13 +20,16 @@
                 <div class="msgNameBox" class="inputContainer">
                     <input type="text" name="name" id="msgName" required placeholder="Your name" class="" #nameField>
                 </div>
+                <span class="requiredMessage mt-8 opacity-0" id="reqCategory">Your name is required</span>
                 <div class="msgEmailBox" class="inputContainer">
                     <input type="email" name="email" id="msgEmail" required placeholder="Your email" #emailField>
                 </div>
+                <span class="requiredMessage mt-8 opacity-0" id="reqCategory">Your email is required</span>
                 <div class="msgMessageBox" class="inputContainerTextarea">
                     <textarea name="msgMessage" id="message" required cols="30" rows="3" placeholder="Your message" #messageField></textarea>
                 </div>
-                <button #sendButton>Say hello :)</button>
+                <span class="requiredMessage mt-8 opacity-0" id="reqCategory">Your message is empty</span>
+                <button #sendButton class="msgSendBtn">Say hello :)</button>
             </form>
             
         <!-- </div> -->

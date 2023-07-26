@@ -21,7 +21,7 @@ export class MyworkComponent {
             'skills': ['Angular', 'TypeScript', 'HTML', 'CSS'],
             'text': 'A Task Manager based on the Kanban System. Create and organise tasks using drag and drop functions, assign users and categories. This was a team project.',
             'link': 'https://github.com/LotharZok/join-project',
-            'image': '/assets/img/screenshots/join.png',
+            'image': 'assets/img/screenshots/join.png',
             'row': 'odd'
         },
         {
@@ -29,7 +29,7 @@ export class MyworkComponent {
             'skills': ['JavaScript', 'HTML', 'CSS'],
             'text': 'A jump and run (and throw) game using object orientation. Help Pepe finding coins und salsa bottles to fight against the crazy hen.',
             'link': 'https://github.com/LotharZok/el-pollo-loco',
-            'image': '/assets/img/screenshots/el-pollo-loco.png',
+            'image': 'assets/img/screenshots/el-pollo-loco.png',
             'row': 'even'
         },
         {
@@ -37,7 +37,7 @@ export class MyworkComponent {
             'skills': ['JavaScript', 'HTML', 'CSS', 'Rest Api'],
             'text': 'Using the PokéAPI this represents a simple library of all creatures of Pokemon. By clicking on a cart it shows further information. Works in german, english, french, spanish and italian.',
             'link': 'https://github.com/LotharZok/pokedex',
-            'image': '/assets/img/screenshots/pokemon-dex.png',
+            'image': 'assets/img/screenshots/pokemon-dex.png',
             'row': 'odd'
         }
     ]
