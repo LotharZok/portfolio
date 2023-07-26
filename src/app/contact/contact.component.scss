@@ -1,3 +1,7 @@
+#contactContent {
+    margin-bottom: 32px;
+}
+
 .contactHeader {
     font-family: baloo;
     font-size: 96px;
@@ -38,13 +42,20 @@
 }
 
 .contactMsgForm {
-    border: 1px solid red;
+    // border: 1px solid red;
     margin-right: 100px;
     flex-basis: 50%;
 
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.msgButton {
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .msgSendBtn {
@@ -55,7 +66,8 @@
     cursor: pointer;
     border: 2px solid var(--lightblue);
     border-radius: 10px;
-    padding: 15px 30px;
+    // padding: 15px 30px;
+    height: 58px;
     width: 200px;
     align-self: center;
 }
@@ -63,9 +75,14 @@
 .msgSendBtn:hover {
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%);
     color: white;
-    padding: 20px 35px;
+    // padding: 15px 35px 20px 35px;
+    height: 68px;
+    width: 220px;
 }
 
+.d-none {
+    opacity: 0;
+}
 
 
 

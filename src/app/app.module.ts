@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContentComponent } from './content/content.component';
 import { MyworkentryComponent } from './myworkentry/myworkentry.component';
 import { FormsModule } from '@angular/forms';
+import { ImprintComponent } from './imprint/imprint.component';
 // inport { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     MyworkComponent,
     ContactComponent,
     ContentComponent,
-    MyworkentryComponent
+    MyworkentryComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,

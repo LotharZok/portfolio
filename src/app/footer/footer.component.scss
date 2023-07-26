@@ -1,3 +1,32 @@
+#footerUpButton {
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    margin-left: 100px;
+    margin-bottom: 32px;
+    border: 2px solid transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+#footerUpButton:hover {
+    background: none;
+    background-color: white;
+    border: 2px solid var(--lightblue);
+
+    img {
+        filter: brightness(0) saturate(100%) invert(18%) sepia(85%) saturate(3079%) hue-rotate(247deg) brightness(93%) contrast(149%);
+    }
+}
+
 #footerContent {
     color: white;
     height: 290px;
@@ -16,13 +45,42 @@
 .footerCenter {
     text-align: center;
     font-size: 23px;
-
+    transition: none;
+    
     .footerSmall {
         font-size: 16px;
+        span {
+            padding-bottom: 4px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    .footerSmall:hover {
+        font-weight: bold;
+    }
+    .footerSmall:hover span {
+        border-bottom: 1px solid white;
     }
 }
 
 .footerLogos {
     display: flex;
     gap: 42px;
+}
+
+.footerLogos > div {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLogo:hover {
+    width: 40px;
+    height: 40px;
 }
