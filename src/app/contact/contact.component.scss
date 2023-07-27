@@ -104,7 +104,7 @@
     input,
     textarea {
         border: 1px solid green;
-        width: 100%;
+        width: calc(100% - 65px);
         margin: 10px 15px;
         border: none;
         font-family: Montserrat;
@@ -116,11 +116,19 @@
         outline: none;
     }
 }
+.inputContainer:hover,
+.inputContainerTextarea:hover {
+    border: 3px solid var(--lightblue);
+}
 
 .inputContainer {
     margin-right: 100px;
     height: 51px;
 }
+// .inputContainer:focus-within,
+// .inputContainerTextarea:focus-within {
+//     border: 3px solid var(--lightblue); /* ok */
+// }
 
 .inputContainerTextarea {
 	height: 97px;
@@ -139,4 +147,14 @@
     color: red;
     font-size: 12px;
     margin-bottom: 4px;
+}
+
+
+// .inputMatField input {
+//     border: 2px solid var(--lightblue);
+// }
+
+.msgMark {
+    width: 25px;
+    height: 25px;
 }

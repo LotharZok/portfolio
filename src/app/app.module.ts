@@ -14,6 +14,7 @@ import { ContentComponent } from './content/content.component';
 import { MyworkentryComponent } from './myworkentry/myworkentry.component';
 import { FormsModule } from '@angular/forms';
 import { ImprintComponent } from './imprint/imprint.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // inport { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -34,7 +35,9 @@ import { ImprintComponent } from './imprint/imprint.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NoopAnimationsModule,
     // ReactiveFormsModule
+    // ContactComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

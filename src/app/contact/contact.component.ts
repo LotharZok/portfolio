@@ -1,9 +1,14 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+// import { MatIconModule } from "@angular/material/icon";
+// import { MatInputModule } from "@angular/material/input";
+// import { MatFormFieldModule } from "@angular/material/form-field";
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
-    styleUrls: ['./contact.component.scss']
+    styleUrls: ['./contact.component.scss'],
+    // standalone: true,
+    // imports: [MatFormFieldModule, MatInputModule, MatIconModule]
 })
 export class ContactComponent {
 
@@ -15,7 +20,14 @@ export class ContactComponent {
     @ViewChild('reqName') reqName!: ElementRef;
     @ViewChild('reqEmail') reqEmail!: ElementRef;
     @ViewChild('reqMessage') reqMessage!: ElementRef;
+    @ViewChild('imgName') imgName!: ElementRef;
+    @ViewChild('imgEmail') imgEmail!: ElementRef;
+    @ViewChild('imgMessage') imgMessage!: ElementRef;
     @ViewChild('sendButton') sendButton!: ElementRef;
+
+    dispNameImg:string = '';
+    dispEmailImg:string = '';
+    dispMessageImg:string = '';
 
     async sendMail() {
         console.log('Sending mail', this.myForm);
@@ -81,5 +93,47 @@ export class ContactComponent {
         }
 
         return (retValue);
+    }
+
+    checkInput(fldName: string) {
+        let checkField: any;
+        let imgField: any;
+        switch (fldName) {
+        case 'nameField':
+            checkField = this.nameField.nativeElement;
+            imgField = this.imgName.nativeElement;
+            if (checkField.value == '') {
+                this.dispNameImg = 'assets/img/exclamation-mark.svg';
+                imgField.classList.remove('d-none');
+            } else {
+                this.dispNameImg = 'assets/img/check-mark.svg';
+                imgField.classList.remove('d-none');
+            }
+            break;
+        case 'emailField':
+            checkField = this.emailField.nativeElement;
+            imgField = this.imgEmail.nativeElement;
+            if (checkField.value == '') {
+                this.dispEmailImg = 'assets/img/exclamation-mark.svg';
+                imgField.classList.remove('d-none');
+            } else {
+                this.dispEmailImg = 'assets/img/check-mark.svg';
+                imgField.classList.remove('d-none');
+            }
+            break;
+        case 'messageField':
+            checkField = this.messageField.nativeElement;
+            imgField = this.imgMessage.nativeElement;
+            if (checkField.value == '') {
+                this.dispMessageImg = 'assets/img/exclamation-mark.svg';
+                imgField.classList.remove('d-none');
+            } else {
+                this.dispMessageImg = 'assets/img/check-mark.svg';
+                imgField.classList.remove('d-none');
+            }
+            break;
+        default:
+            break;
+        }
     }
 }
