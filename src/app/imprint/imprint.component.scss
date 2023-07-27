@@ -1,0 +1,65 @@
+header {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        height: 69px;
+        margin-left: 100px;
+        margin-top: 24px;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--lightblue);
+
+        :visited {
+            color: var(--lightblue);
+        }
+    }
+}
+
+.menu {
+    color: var(--lightblue);
+    margin-right: 100px;
+
+    display: flex;
+    align-items: center;
+
+    .menuEntry {
+        width: 120px;
+        height: 32px;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    .menuEntry:hover {
+        font-weight: bold;
+    }
+}
+
+.impressum {
+    margin: 32px 100px 0 100px;
+    padding-bottom: 50px;
+
+    h1 {
+        font-family: baloo;
+        font-size: 40px;
+        color: var(--lightblue);
+    }
+}
+
+footer {
+    color: white;
+    height: 100px;
+    padding: 0 100px;
+    background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footerImg {
+        height: 69px;
+    }
+}
