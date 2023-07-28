@@ -5,7 +5,7 @@
     <div class="contactMsgBlock">
         <div class="contactTextBlock">
             <div class="contactTextHeader">
-                Got a problem to solve?
+                May I help you?
             </div>
             <div class="contactText">
                 Contact me through this form. I'm interested in hearing from you, knowing your ideas and contributing to your projects with my work.
@@ -14,35 +14,27 @@
                 Need a Frontend developer? <span>Contact me!</span>
             </div>
         </div>
-        <!-- <div> -->
-            <!-- <form action="" (submit)="sendMail()" method="post" class="contactMsgForm"> -->
-            <form (submit)="sendMail()" ngNativeValidate #myForm class="contactMsgForm">
-                <!-- <mat-form-field appearance="outline" class="inputMatField">
-                    <mat-label>Your name</mat-label>
-                    <input matInput placeholder="Your name">
-                    <mat-icon matSuffix>check_circle</mat-icon>
-                    <mat-hint>Your name is required</mat-hint>
-                </mat-form-field> -->
-                <div class="msgNameBox" class="inputContainer">
-                    <input type="text" name="name" id="msgName" placeholder="Your name" class="" #nameField (keyup)="checkInput('nameField')">
-                    <img [src]="dispNameImg" alt="Hint mark" id="msgNameMark" class="msgMark d-none" #imgName>
-                </div>
-                <span class="requiredMessage d-none" #reqName>Your name is required</span>
-                <div class="msgEmailBox" class="inputContainer">
-                    <input type="email" name="email" id="msgEmail" placeholder="Your email" #emailField (keyup)="checkInput('emailField')">
-                    <img [src]="dispEmailImg" alt="Hint mark" id="msgEmailMark" class="msgMark d-none" #imgEmail>
-                </div>
-                <span class="requiredMessage d-none" #reqEmail>Your email is required</span>
-                <div class="msgMessageBox" class="inputContainerTextarea">
-                    <textarea name="msgMessage" id="message" cols="30" rows="3" placeholder="Your message" #messageField (keyup)="checkInput('messageField')"></textarea>
-                    <img [src]="dispMessageImg" alt="Hint mark" id="msgMessageMark" class="msgMark d-none" #imgMessage>
-                </div>
-                <span class="requiredMessage d-none" #reqMessage>Your message is empty</span>
-                <div class="msgButton">
-                    <button #sendButton class="msgSendBtn">Say hello :)</button>
-                </div>
-            </form>
-            
-        <!-- </div> -->
+
+        <form (submit)="sendMail()" ngNativeValidate #myForm class="contactMsgForm">
+            <div class="msgNameBox" class="inputContainer">
+                <input type="text" name="name" id="msgName" placeholder="Your name" class="" #nameField (keyup)="checkInput('nameField')">
+                <img [src]="dispNameImg" alt="Hint mark" id="msgNameMark" class="msgMark d-none" #imgName>
+            </div>
+            <span class="requiredMessage d-none" #reqName>Your name is required</span>
+            <div class="msgEmailBox" class="inputContainer">
+                <input type="email" name="email" id="msgEmail" placeholder="Your email" #emailField (keyup)="checkInput('emailField')">
+                <img [src]="dispEmailImg" alt="Hint mark" id="msgEmailMark" class="msgMark d-none" #imgEmail>
+            </div>
+            <span class="requiredMessage d-none" #reqEmail>Your email is required</span>
+            <div class="msgMessageBox" class="inputContainerTextarea">
+                <textarea name="msgMessage" id="message" cols="30" rows="3" placeholder="Your message" #messageField (keyup)="checkInput('messageField')"></textarea>
+                <img [src]="dispMessageImg" alt="Hint mark" id="msgMessageMark" class="msgMark d-none" #imgMessage>
+            </div>
+            <span class="requiredMessage d-none" #reqMessage>Your message is empty</span>
+            <div class="msgButton">
+                <button #sendButton class="msgSendBtn">Say hello :)</button>
+            </div>
+        </form>
+
     </div>
 </div>

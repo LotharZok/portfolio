@@ -1,13 +1,22 @@
-#contactContent {
-    margin-bottom: 32px;
+/* General style */
+
+.d-none {
+    opacity: 0;
 }
+
+/* General style for this section */
+
+#contactContent {
+    padding: 0 100px 50px 100px;
+}
+
+/* Styles for texts */
 
 .contactHeader {
     font-family: baloo;
     font-size: 96px;
     font-weight: bold;
     color: var(--lightblue);
-    margin-left: 100px;
 }
 
 .contactMsgBlock {
@@ -17,7 +26,6 @@
 }
 
 .contactTextBlock {
-    margin-left: 100px;
     flex-basis: 50%;
 }
 
@@ -25,10 +33,12 @@
     font-size: 32px;
     font-weight: bold;
     color: var(--lightblue);
+    margin-bottom: 32px;
 }
 
 .contactText {
     font-size: 16px;
+    margin-bottom: 24px;
 }
 
 .contactTextFooter {
@@ -41,8 +51,9 @@
     }
 }
 
+/* Styles for the message form */
+
 .contactMsgForm {
-    margin-right: 100px;
     flex-basis: 50%;
 
     display: flex;
@@ -52,7 +63,6 @@
 
 .msgButton {
     height: 70px;
-
     display: flex;
     justify-content: center;
 }
@@ -65,40 +75,26 @@
     cursor: pointer;
     border: 2px solid var(--lightblue);
     border-radius: 10px;
-    // padding: 15px 30px;
-    height: 58px;
-    width: 200px;
+    padding: 15px 30px;
     align-self: center;
 }
 
 .msgSendBtn:hover {
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%);
     color: white;
-    // padding: 15px 35px 20px 35px;
-    height: 68px;
-    width: 220px;
+    padding: 20px 35px;
 }
 
-.d-none {
-    opacity: 0;
-}
-
-
-
-
-
+/* styles for form fields */
 
 .inputContainer,
 .inputContainerTextarea {
     display: flex;
     flex-direction: row;
     align-items: center;
-    // padding: 10px 15px; /* ok */
-    // gap: 10px; /* ok */
     width: 100%;
-    border: 2px solid var(--lightblue); /* ok */
-    border-radius: 10px; /* ok */
-    // cursor: pointer;
+    border: 2px solid var(--lightblue);
+    border-radius: 10px;
 
     input,
     textarea {
@@ -121,13 +117,8 @@
 }
 
 .inputContainer {
-    // margin-right: 100px;
     height: 51px;
 }
-// .inputContainer:focus-within,
-// .inputContainerTextarea:focus-within {
-//     border: 3px solid var(--lightblue); /* ok */
-// }
 
 .inputContainerTextarea {
 	height: 97px;
@@ -148,15 +139,64 @@
     margin-bottom: 4px;
 }
 
-
-// .inputMatField input {
-//     border: 2px solid var(--lightblue);
-// }
-
 .msgMark {
     width: 25px;
     height: 25px;
 }
 #msgMessageMark {
     margin-right: 6px;
+}
+
+/* Styles for small screens / mobile */
+
+@media (max-width: 1000px) {
+    .contactMsgBlock {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    #contactContent {
+        padding: 75px 75px 35px 75px;
+    }
+    .contactHeader {
+        font-size: 80px;
+    }
+    .contactTextHeader {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    .myworkText {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    #contactContent {
+        padding: 50px 50px 25px 50px;
+    }
+    .contactHeader {
+        font-size: 60px;
+    }
+    .myworkText {
+        font-size: 18px;
+    }
+    .msgSendBtn {
+        padding: 10px 20px;
+    }
+    .msgSendBtn:hover {
+        padding: 15px 25px;
+    }
+}
+
+@media (max-width: 350px) {
+    #contactContent {
+        padding: 30px 30px 15px 30px;
+    }
+    .contactHeader {
+        font-size: 40px;
+    }
+    .myworkText {
+        font-size: 16px;
+    }
 }

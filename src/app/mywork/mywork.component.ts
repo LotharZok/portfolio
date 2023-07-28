@@ -18,7 +18,7 @@ export class MyworkComponent {
     }[] = [
         {
             'name': 'Join',
-            'skills': ['Angular', 'TypeScript', 'HTML', 'CSS'],
+            'skills': ['JavaScript', 'HTML', 'CSS'],
             'text': 'A Task Manager based on the Kanban System. Create and organise tasks using drag and drop functions, assign users and categories. This was a team project.',
             'link': 'https://github.com/LotharZok/join-project',
             'image': 'assets/img/screenshots/join.png',
