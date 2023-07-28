@@ -42,3 +42,64 @@
 .skillIconBox:hover .skillLabel {
     font-weight: bold;
 }
+
+/* Styles for small screens / mobile */
+
+@media (max-width: 750px) {
+    .skillList {
+        gap: 40px;
+    }
+    .skillIcon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    #skillContent {
+        padding: 75px 75px 35px 75px;
+    }
+    .skillHeader {
+        font-size: 80px;
+    }
+    .skillIconBox {
+        width: 80px;
+    }
+    .skillList {
+        gap: 20px;
+    }
+    .skillLabel {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    #skillContent {
+        padding: 50px 50px 25px 50px;
+    }
+    .skillHeader {
+        font-size: 60px;
+    }
+    .skillList {
+        gap: 10px;
+    }
+    .skillIconBox {
+        width: 60px;
+    }
+    .skillIcon {
+        width: 50px;
+        height: 50px;
+    }
+    .skillLabel {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 330px) {
+    #skillContent {
+        padding: 30px 30px 15px 30px;
+    }
+    .skillHeader {
+        font-size: 40px;
+    }
+}
