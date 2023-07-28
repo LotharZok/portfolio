@@ -1,3 +1,10 @@
+/* General styles */
+.d-none {
+    display: none;
+}
+
+/* Style for the button to got up */
+
 #footerUpButton {
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     width: 39px;
@@ -27,6 +34,8 @@
     }
 }
 
+/* Style for the footer area */
+
 #footerContent {
     color: white;
     height: 290px;
@@ -46,25 +55,29 @@
     text-align: center;
     font-size: 23px;
     transition: none;
-    
-    .footerSmall {
-        font-size: 16px;
-        span {
-            padding-bottom: 4px;
-        }
+}
 
-        a {
-            text-decoration: none;
-            color: white;
-        }
+/* Styles for the imprint link */
+
+.footerSmall {
+    font-size: 16px;
+    span {
+        padding-bottom: 4px;
     }
-    .footerSmall:hover {
-        font-weight: bold;
-    }
-    .footerSmall:hover span {
-        border-bottom: 1px solid white;
+
+    a {
+        text-decoration: none;
+        color: white;
     }
 }
+.footerSmall:hover {
+    font-weight: bold;
+}
+.footerSmall:hover span {
+    border-bottom: 1px solid white;
+}
+
+/* Styles for the logos */
 
 .footerLogos {
     display: flex;
@@ -83,4 +96,33 @@
 .footerLogo:hover {
     width: 40px;
     height: 40px;
+}
+
+/* Styles for small screens / mobile */
+
+@media (max-width: 750px) {
+    #footerContent {
+        height: 250px;
+        flex-direction: column;
+        padding: 32px 0;
+
+        .imprintEmptyRow {
+            display: none;
+        }
+
+        .imprintCopyright {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+        #imprintUpper {
+            display: none;
+        }
+
+        #imprintLower {
+            display: block;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
 }
