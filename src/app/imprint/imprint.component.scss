@@ -1,12 +1,10 @@
 header {
-    // border: 1px solid red;
+    padding: 50px 100px;
     display: flex;
     justify-content: space-between;
 
     img {
         height: 69px;
-        margin-left: 100px;
-        margin-top: 24px;
     }
 
     a {
@@ -21,7 +19,7 @@ header {
 
 .menu {
     color: var(--lightblue);
-    margin-right: 100px;
+    // margin-right: 100px;
 
     display: flex;
     align-items: center;
@@ -39,8 +37,7 @@ header {
 }
 
 .impressum {
-    margin: 32px 100px 0 100px;
-    padding-bottom: 50px;
+    padding: 0 100px 50px 100px;
 
     h1 {
         font-family: baloo;
@@ -61,5 +58,40 @@ footer {
 
     .footerImg {
         height: 69px;
+    }
+}
+
+/* Styles for small screens / mobile */
+
+@media (max-width: 600px) {
+    header,
+    footer {
+        padding: 35px 75px;
+    }
+    .impressum {
+        padding: 0 75px 35px 75px;
+    }
+}
+
+@media (max-width: 450px) {
+    header,
+    footer {
+        padding: 25px 50px;
+    }
+    .impressum {
+        padding: 0 50px 25px 50px;
+    }
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    header,
+    footer {
+        padding: 15px 30px;
+    }
+    .impressum {
+        padding: 0 30px 15px 30px;
     }
 }
