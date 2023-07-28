@@ -3,7 +3,8 @@
     display: flex;
     gap: 50px;
 }
-/* Hinzugefügte Regel, um die Reihenfolge zurückzusetzen */
+
+/* Additional rule for order */
 .roweven {
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -13,9 +14,13 @@
     }
 }
 
+/* Styles for image part */
 .entryImage {
-    width: 620px;
-    height: 400px;
+    flex-basis: 50%;
+    width: 100%;
+    max-width: 620px;
+    // max-height: 400px;
+    object-fit: cover;
     box-shadow: 5px 5px 15px 0px #00000026;
 }
 
@@ -23,7 +28,10 @@
     transform: translateY(-32px) scale(1.05);
 }
 
+/* Styles for text part */
 .entryTextBox {
+    flex-basis: 50%;
+    width: 100%;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -75,3 +83,80 @@
     }
 }
 
+/* Styles for small screens / mobile */
+
+@media (max-width: 1000px) {
+    .entry {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .entryTextBox {
+        align-items: center;
+    }
+
+    .roweven {
+        .entryTextBox {
+            align-items: center;
+        }
+    }
+
+    .entryTitle {
+        margin-bottom: 15px;
+    }
+    
+    .entrySkills {
+        margin-bottom: 25px;
+    }
+
+    .entryLinkButton {
+        margin-top: 35px;
+        
+        .worksBtn {
+            padding: 10px 20px;
+        }
+    
+        .worksBtn:hover {
+            padding: 15px 25px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .entryLinkButton {
+        font-size: 20px;
+
+        span {
+            width: 130px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .entryTitle {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .entrySkills {
+        font-size: 18px;
+    }
+
+    .entryText {
+        font-size: 14px;
+    }
+
+    .entryLinkButton {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    .entryLinkButton {
+        font-size: 14px;
+        span {
+            width: 115px;
+        }
+    }
+}
