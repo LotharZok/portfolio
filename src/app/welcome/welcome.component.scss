@@ -1,3 +1,4 @@
+/* Background styles */
 .welcomeGradient {
     position: absolute;
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
@@ -13,35 +14,52 @@
     z-index: -1;
 }
 
+/* Content styles */
 .welcomeContent {
-    // border: 1px solid green;
     padding-top: 70px;
+    // padding: 70px 100px 0 100px;
     display: flex;
+    justify-content: space-evenly;
+
+    margin: auto;
+    // max-width: 1440px;
 }
 
 .personImage {
-    // border: 1px solid black;
+    border: 1px solid green;
     width: 100%;
-    margin-left: 30px;
+    margin-left: 100px;
+    flex-basis: 50%;
 
     img {
-        // border: 1px solid blue;
+        // width: 100%;
+        // height: auto;
+
+        // max-height: 917px;
+        height: 917px;
+        // width: auto;
+        // max-width: 670px;
+
         object-fit: cover;
+        object-position: center;
     }
 }
 
 .welcomeText {
-    // border: 1px solid lightgrey;
+    border: 1px solid red;
     width: 100%;
     color: var(--lightblue);
-    margin-top: 125px;
+    padding-top: 125px;
     margin-right: 100px;
+    flex-basis: 50%;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .welcomeSubHeader {
         font-size: 60px;
+        // font-size: 4.16vw;
         font-weight: normal;
         line-height: 64px;
     }
@@ -49,6 +67,7 @@
     .welcomeHeader {
         font-family: Baloo;
         font-size: 120px;
+        // font-size: 8.33vw;
         font-weight: bold;
         line-height: 120px;
     }
@@ -58,7 +77,6 @@
     width: 100%;
     font-size: 23px;
     padding-top: 80px;
-    // border: 1px solid red;
 
     display: flex;
     flex-direction: column;
@@ -95,11 +113,15 @@
     }
 }
 
+/* special classes for tags */
 .sm3 {
     letter-spacing: -3px;
 }
 .sp3 {
     letter-spacing: 3px;
+}
+.sp2 {
+    letter-spacing: 2px;
 }
 .br1 {
     border-right: 1px solid var(--lightblue);

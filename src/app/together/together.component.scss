@@ -1,21 +1,11 @@
 #togetherContent {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin: auto;
+
+    padding-top: 50px;
+    padding-bottom: 100px;
     display: flex;
     justify-content: space-evenly;
     gap: 32px;
-}
-
-.ball1 {
-    position: relative;
-    margin-top: -100px;
-    margin-left: 50%;
-}
-
-.ball2 {
-    position: relative;
-    margin-left: 75%;
-    margin-top: -20px;
 }
 
 .togetherHeader {
@@ -48,5 +38,92 @@
         background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, var(--lightblue) 6.25%, var(--lightblue) 51.56%, var(--blue) 100%);
         color: white;
         padding: 20px 35px;
+    }
+}
+
+/* Styles for the background balls */
+.ball1 {
+    position: relative;
+    margin-top: -100px;
+    margin-left: 50%;
+}
+
+.ball2 {
+    position: relative;
+    margin-left: 75%;
+    margin-top: -20px;
+}
+
+
+/* Styles for small screens / mobile */
+
+@media (max-width: 1200px) {
+    .togetherHeader {
+        font-size: 80px;
+        line-height: 80px;
+    }
+}
+
+@media (max-width: 950px) {
+    #togetherContent {
+        flex-direction: column;
+    }
+    .togetherHeader {
+        margin-right: 100px;
+    }
+    .togetherText {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .togetherHeader {
+        font-size: 60px;
+        line-height: 60px;
+        margin: 0 75px;
+    }
+    .togetherText {
+        font-size: 20px;
+        margin: 0 75px;
+    }
+}
+
+@media (max-width: 450px) {
+    .togetherHeader {
+        font-size: 40px;
+        line-height: 40px;
+        margin: 0 50px;
+    }
+    .togetherText {
+        font-size: 16px;
+        margin: 0 50px;
+
+        .togetherBtn {
+            padding: 10px 20px;
+        }
+
+        .togetherBtn:hover {
+            padding: 15px 25px;
+        }
+    }
+}
+
+@media (max-width: 310px) {
+    .togetherHeader {
+        font-size: 30px;
+        line-height: 30px;
+        margin: 0 30px;
+    }
+    .togetherText {
+        font-size: 14px;
+        margin: 0 30px;
+
+        .togetherBtn {
+            padding: 10px 20px;
+        }
+
+        .togetherBtn:hover {
+            padding: 15px 25px;
+        }
     }
 }

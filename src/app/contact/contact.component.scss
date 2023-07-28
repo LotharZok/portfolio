@@ -42,7 +42,6 @@
 }
 
 .contactMsgForm {
-    // border: 1px solid red;
     margin-right: 100px;
     flex-basis: 50%;
 
@@ -99,7 +98,7 @@
     width: 100%;
     border: 2px solid var(--lightblue); /* ok */
     border-radius: 10px; /* ok */
-    cursor: pointer;
+    // cursor: pointer;
 
     input,
     textarea {
@@ -122,7 +121,7 @@
 }
 
 .inputContainer {
-    margin-right: 100px;
+    // margin-right: 100px;
     height: 51px;
 }
 // .inputContainer:focus-within,
@@ -157,4 +156,7 @@
 .msgMark {
     width: 25px;
     height: 25px;
+}
+#msgMessageMark {
+    margin-right: 6px;
 }
