@@ -29,18 +29,16 @@
     border: 1px solid green;
     width: 100%;
     margin-left: 100px;
+    align-self:flex-end;
     flex-basis: 50%;
 
     img {
-        // width: 100%;
-        // height: auto;
+        width: 100%;
+        height: auto;
 
-        // max-height: 917px;
-        height: 917px;
-        // width: auto;
-        // max-width: 670px;
+        max-height: 917px;
 
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
     }
 }
