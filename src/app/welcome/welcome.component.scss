@@ -16,39 +16,37 @@
 
 /* Content styles */
 .welcomeContent {
-    padding-top: 70px;
-    // padding: 70px 100px 0 100px;
+    margin: auto;
+    // padding-top: 70px;
+    padding: 70px 100px 0 100px;
     display: flex;
     justify-content: space-evenly;
-
-    margin: auto;
-    // max-width: 1440px;
 }
 
 .personImage {
-    border: 1px solid green;
     width: 100%;
-    margin-left: 100px;
     align-self:flex-end;
     flex-basis: 50%;
 
+    display: flex;
+    justify-content: center;
+
     img {
         width: 100%;
-        height: auto;
-
+        max-width: 670px;
+        // height: auto;
         max-height: 917px;
 
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
     }
 }
 
 .welcomeText {
-    border: 1px solid red;
+    margin: auto;
     width: 100%;
     color: var(--lightblue);
     padding-top: 125px;
-    margin-right: 100px;
     flex-basis: 50%;
 
     display: flex;
@@ -126,4 +124,217 @@
 }
 .bl1 {
     border-left: 1px solid var(--lightblue);
+}
+
+/* Styles for small screens / mobile */
+
+@media (max-width: 1400px) {
+    .welcomeText {
+        padding-top: 70px;
+        .welcomeSubHeader {
+            font-size: 40px;
+            line-height: 44px;
+        }
+        .welcomeHeader {
+            font-size: 100px;
+            line-height: 100px;
+        }
+    }
+    .welcomeBottom {
+        padding-top: 50px;
+    }
+    .welcomeGradient {
+        height: 843px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .welcomeText {
+        // padding-top: 20px;
+        .welcomeSubHeader {
+            font-size: 30px;
+            line-height: 34px;
+        }
+        .welcomeHeader {
+            font-size: 80px;
+            line-height: 80px;
+        }
+    }
+    .welcomeBottom {
+        padding-top: 30px;
+    }
+    .welcomeGradient {
+        height: 774px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .welcomeText {
+        // padding-top: 10px;
+        .welcomeSubHeader {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .welcomeHeader {
+            font-size: 70px;
+            line-height: 70px;
+        }
+    }
+    .welcomeBottom {
+        padding-top: 20px;
+    }
+    .welcomeGradient {
+        height: 730px;
+    }
+    .wh892 {
+        width: 700px;
+        height: 700px;
+    }
+}
+
+@media (max-width: 950px) {
+    .welcomeContent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcomeText {
+        // padding-top: 20px;
+        color: white;
+        .welcomeSubHeader {
+            font-size: 30px;
+            line-height: 30px;
+        }
+        .welcomeHeader {
+            font-size: 80px;
+            line-height: 80px;
+        }
+        .sm3 {
+            letter-spacing: -1px;
+        }
+    }
+
+    .welcomeBottom {
+        display: none;
+    }
+
+    .personImage img {
+        // margin-right: 100px;
+        max-height: 685px;
+        object-fit: contain;
+    }
+
+    .welcomeText {
+        order: -1;
+    }
+    .welcomeGradient {
+        height: 1034px;
+    }
+    .wh892 {
+        width: 892px;
+        height: 892px;
+    }
+}
+
+@media (max-width: 650px) {
+    .welcomeContent {
+        padding: 70px 75px 0 75px;
+    }
+    .welcomeText {
+        .welcomeSubHeader {
+            font-size: 25px;
+            line-height: 25px;
+        }
+        .welcomeHeader {
+            font-size: 70px;
+            line-height: 70px;
+        }
+    }
+    .welcomeGradient {
+        height: 969px;
+    }
+    .wh892 {
+        width: 700px;
+        height: 700px;
+    }
+}
+
+@media (max-width: 550px) {
+    .welcomeText {
+        .welcomeSubHeader {
+            font-size: 25px;
+            line-height: 25px;
+        }
+        .welcomeHeader {
+            font-size: 60px;
+            line-height: 60px;
+        }
+    }
+    .welcomeGradient {
+        height: 825px;
+    }
+}
+
+@media (max-width: 500px) {
+    .welcomeContent {
+        padding: 70px 50px 0 50px;
+    }
+    .wh892 {
+        width: 600px;
+        height: 600px;
+    }
+    .welcomeGradient {
+        height: 800px;
+    }
+}
+
+@media (max-width: 450px) {
+    .welcomeText {
+        .welcomeSubHeader {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .welcomeHeader {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+    .welcomeGradient {
+        height: 760px;
+    }
+}
+
+@media (max-width: 380px) {
+    .welcomeContent {
+        padding: 70px 30px 0 30px;
+    }
+    .welcomeText {
+        .welcomeHeader {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+    .welcomeGradient {
+        height: 670px;
+    }
+    .wh892 {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 310px) {
+    .welcomeText {
+        .welcomeSubHeader {
+            font-size: 15px;
+            line-height: 15px;
+        }
+        .welcomeHeader {
+            font-size: 35px;
+            line-height: 35px;
+        }
+    }
+    .welcomeGradient {
+        height: 555px;
+    }
 }
