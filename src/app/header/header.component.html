@@ -1,6 +1,6 @@
 <header>
     <div>
-        <img src="assets/img/LMZ Weiß.png" alt="">
+        <img src="assets/img/LMZ Weiß.png" alt="Logo LMZ">
     </div>
     <div class="menu">
         <div class="menuEntry"><a href="#together">About me</a></div>
@@ -8,4 +8,22 @@
         <div class="menuEntry"><a href="#mywork">My work</a></div>
         <div class="menuEntry"><a href="#contact">Contact</a></div>
     </div>
+    <div class="menuMobile">
+        <div class="menuMobileOpen">
+            <img src="assets/img/burger.svg" class="menuLogo" (click)="openMenu()" alt="open menu">
+        </div>
+    </div>
 </header>
+
+<div id="menuMobileOverlay" #menuMobileOverlay class="d-none">
+    <div class="menuMobileHeader">
+        <img src="assets/img/LMZ Weiß.png" alt="Logo LMZ">
+        <img src="assets/img/close.svg" class="menuLogo" (click)="closeMenu()" alt="close menu">
+    </div>
+    <div class="menuOverlay">
+        <div class="menuEntry" (click)="closeMenu()"><a href="#together">About me</a></div>
+        <div class="menuEntry" (click)="closeMenu()"><a href="#skills">Skill set</a></div>
+        <div class="menuEntry" (click)="closeMenu()"><a href="#mywork">My work</a></div>
+        <div class="menuEntry" (click)="closeMenu()"><a href="#contact">Contact</a></div>
+    </div>
+</div>

@@ -1,6 +1,5 @@
 header {
     margin:auto;
-    // max-width: 1440px;
     display: flex;
     justify-content: space-between;
 
@@ -23,8 +22,9 @@ header {
 .menu {
     color: var(--lightblue);
     margin-right: 100px;
-
+    
     display: flex;
+    display: none;
     align-items: center;
 
     .menuEntry {
@@ -32,6 +32,72 @@ header {
         height: 32px;
         text-align: right;
         cursor: pointer;
+    }
+
+    .menuEntry:hover {
+        font-weight: bold;
+    }
+}
+
+/* Styles for menu for small screens / mobile */
+
+.d-none {
+    display: none;
+}
+
+.menuMobile {
+    margin-right: 100px;
+}
+.menuLogo {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+/* Styles for overlay */
+#menuMobileOverlay {
+    position: absolute;
+    width: 100%;
+    // height: 100vh;
+    height: 8000px;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.menuMobileHeader {
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    
+    img {
+        height: 69px;
+        // margin-top: 24px;
+        margin: 24px 100px 0px 100px;
+    }
+}
+
+.menuOverlay {
+    margin-top: 20%;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    .menuEntry {
+        // width: 120px;
+        font-size: 23px;
+        height: 32px;
+        text-align: right;
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: var(--lightblue);
+        }
     }
 
     .menuEntry:hover {
