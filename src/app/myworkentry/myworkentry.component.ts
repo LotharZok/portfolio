@@ -15,6 +15,7 @@ export class MyworkentryComponent {
       skills: string[],
       text: string,
       link: string,
+      livelink: string,
       image: string,
       row: string
     } = {
@@ -22,6 +23,7 @@ export class MyworkentryComponent {
       skills: [],
       text: '',
       link: '',
+      livelink: '',
       image: '',
       row: ''
     }
