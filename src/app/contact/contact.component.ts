@@ -22,6 +22,7 @@ export class ContactComponent {
     @ViewChild('imgEmail') imgEmail!: ElementRef;
     @ViewChild('imgMessage') imgMessage!: ElementRef;
     @ViewChild('sendButton') sendButton!: ElementRef;
+    @ViewChild('msgSent') msgSent!: ElementRef;
 
     dispNameImg:string = '';
     dispEmailImg:string = '';
@@ -47,9 +48,32 @@ export class ContactComponent {
                 method: 'POST',
                 body: fd
             });
+            this.showSentMessage();
         }
-        
         this.toggleFieldDisabled(false);
+    }
+
+
+    /**
+     * Shows a message that the mail has been sent. Calls the function to empty the form fields.
+     */
+    showSentMessage() {
+        let msgSent = this.msgSent.nativeElement;
+        msgSent.classList.remove('d-none');
+        this.emptyFields();
+    }
+
+
+    /**
+     * Empties the form fields.
+     */
+    emptyFields() {
+        let nameField = this.nameField.nativeElement;
+        let emailField = this.emailField.nativeElement;
+        let messageField = this.messageField.nativeElement;
+        nameField.value = '';
+        emailField.value = '';
+        messageField.value = '';
     }
 
 

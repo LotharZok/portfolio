@@ -87,6 +87,14 @@
 
 /* styles for form fields */
 
+#msgNameBox,
+#msgEmailBox {
+    height: 75px;
+}
+#msgMessageBox {
+    height: 120px;
+}
+
 .inputContainer,
 .inputContainerTextarea {
     display: flex;
@@ -104,6 +112,7 @@
         border: none;
         font-family: Montserrat;
         font-size: 16px;
+        resize: none;
     }
     
     input:focus,
@@ -145,6 +154,14 @@
 }
 #msgMessageMark {
     margin-right: 6px;
+}
+
+.msgSent {
+    font-family: baloo;
+    font-size: 24px;
+    color: var(--blue);
+    text-align: center;
+    margin-top: 16px;
 }
 
 /* Styles for small screens / mobile */

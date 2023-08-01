@@ -16,23 +16,34 @@
         </div>
 
         <form (submit)="sendMail()" ngNativeValidate #myForm class="contactMsgForm">
-            <div class="msgNameBox" class="inputContainer">
-                <input type="text" name="name" id="msgName" placeholder="Your name" class="" #nameField (keyup)="checkInput('nameField')">
-                <img [src]="dispNameImg" alt="Hint mark" id="msgNameMark" class="msgMark d-none" #imgName>
+            <div id="msgNameBox">
+                <div class="inputContainer">
+                    <input type="text" name="name" id="msgName" placeholder="Your name" class="" #nameField (keyup)="checkInput('nameField')">
+                    <img [src]="dispNameImg" alt="Hint mark" id="msgNameMark" class="msgMark d-none" #imgName>
+                </div>
+                <span class="requiredMessage d-none" #reqName>Your name is required</span>
             </div>
-            <span class="requiredMessage d-none" #reqName>Your name is required</span>
-            <div class="msgEmailBox" class="inputContainer">
-                <input type="email" name="email" id="msgEmail" placeholder="Your email" #emailField (keyup)="checkInput('emailField')">
-                <img [src]="dispEmailImg" alt="Hint mark" id="msgEmailMark" class="msgMark d-none" #imgEmail>
+            <div id="msgEmailBox">
+                <div class="inputContainer">
+                    <input type="email" name="email" id="msgEmail" placeholder="Your email" #emailField (keyup)="checkInput('emailField')">
+                    <img [src]="dispEmailImg" alt="Hint mark" id="msgEmailMark" class="msgMark d-none" #imgEmail>
+                </div>
+                <span class="requiredMessage d-none" #reqEmail>Your email is required</span>
             </div>
-            <span class="requiredMessage d-none" #reqEmail>Your email is required</span>
-            <div class="msgMessageBox" class="inputContainerTextarea">
-                <textarea name="msgMessage" id="message" cols="30" rows="3" placeholder="Your message" #messageField (keyup)="checkInput('messageField')"></textarea>
-                <img [src]="dispMessageImg" alt="Hint mark" id="msgMessageMark" class="msgMark d-none" #imgMessage>
+            <div id="msgMessageBox">
+                <div class="inputContainerTextarea">
+                    <textarea name="msgMessage" id="message" cols="30" rows="3" placeholder="Your message" #messageField (keyup)="checkInput('messageField')"></textarea>
+                    <img [src]="dispMessageImg" alt="Hint mark" id="msgMessageMark" class="msgMark d-none" #imgMessage>
+                </div>
+                <span class="requiredMessage d-none" #reqMessage>Your message is empty</span>
             </div>
-            <span class="requiredMessage d-none" #reqMessage>Your message is empty</span>
+            
             <div class="msgButton">
                 <button #sendButton class="msgSendBtn">Say hello :)</button>
+            </div>
+
+            <div #msgSent class="msgSent d-none">
+                Thank you<br>Your message has been sent.
             </div>
         </form>
 
