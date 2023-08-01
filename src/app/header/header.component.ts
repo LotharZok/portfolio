@@ -8,16 +8,20 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class HeaderComponent {
     @ViewChild('menuMobileOverlay') menuMobileOverlay!: ElementRef;
 
-    openMenu() {
-        console.log('openMenu gestartet');
 
+    /**
+     * Opens the overlay menu
+     */
+    openMenu() {
         let menuMobileOverlay = this.menuMobileOverlay.nativeElement;
         menuMobileOverlay.classList.remove('d-none');
     }
 
-    closeMenu() {
-        console.log('closeMenu gestartet');
 
+    /**
+     * Closes the overlay menu
+     */
+    closeMenu() {
         let menuMobileOverlay = this.menuMobileOverlay.nativeElement;
         menuMobileOverlay.classList.add('d-none');
     }

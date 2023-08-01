@@ -7,6 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class MyworkentryComponent {
 
+    /**
+     * Template for entries
+     */
     @Input() entry: {
       name: string,
       skills: string[],

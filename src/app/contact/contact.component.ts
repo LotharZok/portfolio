@@ -1,17 +1,15 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-// import { MatIconModule } from "@angular/material/icon";
-// import { MatInputModule } from "@angular/material/input";
-// import { MatFormFieldModule } from "@angular/material/form-field";
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
-    // standalone: true,
-    // imports: [MatFormFieldModule, MatInputModule, MatIconModule]
 })
 export class ContactComponent {
 
+    /**
+     * Variables for selecting form elements
+     */
     @ViewChild('myForm') myForm!: ElementRef;
 
     @ViewChild('nameField') nameField!: ElementRef;
@@ -29,24 +27,18 @@ export class ContactComponent {
     dispEmailImg:string = '';
     dispMessageImg:string = '';
 
+
+    /**
+     * Function for sending a mail
+     */
     async sendMail() {
-        console.log('Sending mail', this.myForm);
-        
         let nameField = this.nameField.nativeElement;
         let emailField = this.emailField.nativeElement;
         let messageField = this.messageField.nativeElement;
-        let sendButton = this.sendButton.nativeElement;
 
-        nameField.disabled = true;
-        emailField.disabled = true;
-        messageField.disabled = true;
-        sendButton.disabled = true;
+        this.toggleFieldDisabled(true);
 
         if (this.checkFields(nameField, emailField, messageField)) {
-    
-            // Animation anzeigen, daß gesendet wird
-            
-            // send mail
             let fd = new FormData();
             fd.append('name', nameField.value);
             fd.append('email', emailField.value);
@@ -55,46 +47,96 @@ export class ContactComponent {
                 method: 'POST',
                 body: fd
             });
-    
-            // Text anzeigen: Nachricht gesendet
         }
         
-        nameField.disabled = false;
-        emailField.disabled = false;
-        messageField.disabled = false;
-        sendButton.disabled = false;
-
+        this.toggleFieldDisabled(false);
     }
 
+
+    /**
+     * Disables the form fields or makes them available again.
+     * 
+     * @param status boolean - Disable the field (true) or not (false).
+     */
+    toggleFieldDisabled(status:boolean) {
+        let nameField = this.nameField.nativeElement;
+        let emailField = this.emailField.nativeElement;
+        let messageField = this.messageField.nativeElement;
+        let sendButton = this.sendButton.nativeElement;
+
+        nameField.disabled = status;
+        emailField.disabled = status;
+        messageField.disabled = status;
+        sendButton.disabled = status;
+    }
+
+
+    /**
+     * Checks the required field in the form and displays a message to a field if it is not ok.
+     * 
+     * @param nameField ElementRef - Reference to the name field of the form
+     * @param emailField ElementRef - Reference to the email field of the form
+     * @param messageField ElementRef - Reference to the message field of the form
+     * @returns boolean - All field entries are ok or not
+     */
     checkFields(nameField:any, emailField:any, messageField:any): boolean {
-        let reqName = this.reqName.nativeElement;
-        let reqEmail = this.reqEmail.nativeElement;
-        let reqMessage = this.reqMessage.nativeElement;
-
         let retValue: boolean = true;
+        retValue = this.checkField(nameField) || this.checkField(emailField) || this.checkField(messageField);
 
-        if (nameField.value == '') {
-            reqName.classList.remove('d-none');
+        return (retValue);
+    }
+
+
+    /**
+     * Checks a required field in the form. Called from checkFields for every single field.
+     * 
+     * @param fld ElementRef - Reference to the field to be checked
+     * @returns boolean - All field entries are ok or not
+     */
+    checkField(fld: any):boolean {
+        let retValue: boolean = true;
+        if (fld.value == '') {
+            this.showRequiredMessage(fld.name, 'remove');
             retValue = false;
         } else {
-            reqName.classList.add('d-none');
-        }
-        if (emailField.value == '') {
-            reqEmail.classList.remove('d-none');
-            retValue = false;
-        } else {
-            reqEmail.classList.add('d-none');
-        }
-        if (messageField.value == '') {
-            reqMessage.classList.remove('d-none');
-            retValue = false;
-        } else {
-            reqMessage.classList.add('d-none');
+            this.showRequiredMessage(fld.name, 'add');
         }
 
         return (retValue);
     }
 
+
+    /**
+     * Shows the required field message to the given field or removes the message.
+     * 
+     * @param fldName string - The name of the field whose message should be shown.
+     * @param msg string - 'remove' or 'add' class d-none from/to the class list.
+     */
+    showRequiredMessage(fldName:string, msg:string) {
+        let reqName = this.reqName.nativeElement;
+        let reqEmail = this.reqEmail.nativeElement;
+        let reqMessage = this.reqMessage.nativeElement;
+        switch (fldName) {
+        case 'name':
+            (msg == 'remove') ? reqName.classList.remove('d-none') : reqName.classList.add('d-none');
+            break;
+        case 'email':
+            (msg == 'remove') ? reqEmail.classList.remove('d-none') : reqEmail.classList.add('d-none');
+            break;
+        case 'msgMessage':
+            (msg == 'remove') ? reqMessage.classList.remove('d-none') : reqMessage.classList.add('d-none');
+            break;
+        default:
+            break;
+        }
+    }
+
+
+    /**
+     * Checks if the entry in a field is ok and displays an according icon. Called when a letter is typed into a field.
+     * 
+     * @param fldName string - The name of the field to check
+     */
     checkInput(fldName: string) {
         let checkField: any;
         let imgField: any;
@@ -102,38 +144,36 @@ export class ContactComponent {
         case 'nameField':
             checkField = this.nameField.nativeElement;
             imgField = this.imgName.nativeElement;
-            if (checkField.value == '') {
-                this.dispNameImg = 'assets/img/exclamation-mark.svg';
-                imgField.classList.remove('d-none');
-            } else {
-                this.dispNameImg = 'assets/img/check-mark.svg';
-                imgField.classList.remove('d-none');
-            }
+            (checkField.value == '') ? this.dispNameImg = 'assets/img/exclamation-mark.svg': this.dispNameImg = 'assets/img/check-mark.svg';
             break;
         case 'emailField':
             checkField = this.emailField.nativeElement;
             imgField = this.imgEmail.nativeElement;
-            if (checkField.value == '') {
-                this.dispEmailImg = 'assets/img/exclamation-mark.svg';
-                imgField.classList.remove('d-none');
-            } else {
-                this.dispEmailImg = 'assets/img/check-mark.svg';
-                imgField.classList.remove('d-none');
-            }
+            (checkField.value == '') ? this.dispEmailImg = 'assets/img/exclamation-mark.svg': this.dispEmailImg = 'assets/img/check-mark.svg';
             break;
         case 'messageField':
             checkField = this.messageField.nativeElement;
             imgField = this.imgMessage.nativeElement;
-            if (checkField.value == '') {
-                this.dispMessageImg = 'assets/img/exclamation-mark.svg';
-                imgField.classList.remove('d-none');
-            } else {
-                this.dispMessageImg = 'assets/img/check-mark.svg';
-                imgField.classList.remove('d-none');
-            }
+            (checkField.value == '') ? this.dispMessageImg = 'assets/img/exclamation-mark.svg': this.dispMessageImg = 'assets/img/check-mark.svg';
             break;
         default:
             break;
+        }
+        this.setMark(checkField, imgField);
+    }
+
+
+    /**
+     * Sets an icon to a given field.
+     * 
+     * @param checkField any - The field whose value is checked.
+     * @param imgField any - The image field, that will be set.
+     */
+    setMark(checkField:any, imgField:any) {
+        if (checkField.value == '') {
+            imgField.classList.remove('d-none');
+        } else {
+            imgField.classList.remove('d-none');
         }
     }
 }

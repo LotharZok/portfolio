@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class MyworkComponent {
 
-
+    /**
+     * JSON-Array with one entry for every list entry in the works list
+     */
     works: {
         name: string,
         skills: string[],

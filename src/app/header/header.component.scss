@@ -24,7 +24,6 @@ header {
     margin-right: 100px;
     
     display: flex;
-    display: none;
     align-items: center;
 
     .menuEntry {
@@ -39,6 +38,7 @@ header {
     }
 }
 
+
 /* Styles for menu for small screens / mobile */
 
 .d-none {
@@ -46,6 +46,7 @@ header {
 }
 
 .menuMobile {
+    display: none;
     margin-right: 100px;
 }
 .menuLogo {
@@ -54,53 +55,63 @@ header {
     cursor: pointer;
 }
 
+
 /* Styles for overlay */
-#menuMobileOverlay {
-    position: absolute;
-    width: 100%;
-    // height: 100vh;
-    height: 8000px;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.75);
-}
+/* Switch to column style at 950px width */
 
-.menuMobileHeader {
-    margin:auto;
-    display: flex;
-    justify-content: space-between;
-    
-    img {
-        height: 69px;
-        // margin-top: 24px;
-        margin: 24px 100px 0px 100px;
+@media (max-width: 950px) {
+    .menu {
+        display: none;
     }
-}
+    .menuMobile {
+        display: block;
+    }
 
-.menuOverlay {
-    margin-top: 20%;
-    margin-left: 100px;
-    margin-right: 100px;
+    #menuMobileOverlay {
+        position: absolute;
+        width: 100%;
+        // height: 100vh;
+        height: 8000px; /* So it overlays the complete screen */
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-
-    .menuEntry {
-        // width: 120px;
-        font-size: 23px;
-        height: 32px;
-        text-align: right;
-        cursor: pointer;
-
-        a {
-            text-decoration: none;
-            color: var(--lightblue);
+    .menuMobileHeader {
+        margin:auto;
+        display: flex;
+        justify-content: space-between;
+        
+        img {
+            height: 69px;
+            margin: 24px 100px 0px 100px;
         }
     }
-
-    .menuEntry:hover {
-        font-weight: bold;
+    
+    .menuOverlay {
+        margin-top: 20%;
+        margin-left: 100px;
+        margin-right: 100px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    
+        .menuEntry {
+            font-size: 23px;
+            height: 32px;
+            text-align: right;
+            cursor: pointer;
+    
+            a {
+                text-decoration: none;
+                color: var(--lightblue);
+            }
+        }
+    
+        .menuEntry:hover {
+            font-weight: bold;
+        }
     }
 }
