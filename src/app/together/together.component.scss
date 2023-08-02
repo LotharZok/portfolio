@@ -87,6 +87,9 @@
         font-size: 20px;
         margin: 0 75px;
     }
+    .ball1 {
+        margin-left: 47%;
+    }
 }
 
 @media (max-width: 450px) {
@@ -107,6 +110,10 @@
             padding: 15px 25px;
         }
     }
+    .ball1 {
+        height: 150px;
+        width: 150px;
+    }
 }
 
 @media (max-width: 310px) {
@@ -118,5 +125,15 @@
     .togetherText {
         font-size: 14px;
         margin: 0 30px;
+    }
+}
+
+@media (max-width: 280px) {
+    .ball1 {
+        width: 140px;
+        height: 140px;
+    }
+    .ball2 {
+        margin-left: 70%;
     }
 }

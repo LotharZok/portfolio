@@ -50,6 +50,12 @@
 
 /* Styles for small screens / mobile */
 
+@media (max-width: 1000px) {
+    .ball4 {
+        display: none;
+    }
+}
+
 @media (max-width: 600px) {
     #myworkContent {
         padding: 75px 75px 35px 75px;
@@ -59,6 +65,9 @@
     }
     .myworkText {
         font-size: 20px;
+    }
+    .ball1 {
+        display: none;
     }
 }
 
@@ -71,6 +80,12 @@
     }
     .myworkText {
         font-size: 18px;
+    }
+    .ball2 {
+        margin-left: 50%;
+        margin-right: 0;
+        width: 100px;
+        height: 100px;
     }
 }
 

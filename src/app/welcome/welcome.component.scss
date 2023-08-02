@@ -357,6 +357,10 @@
     .personImage img {
         height: 350px;
     }
+    .wh892 {
+        width: 550px;
+        height: 550px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -377,10 +381,6 @@
     }
     .personImage img {
         height: 325px;
-    }
-    .wh892 {
-        width: 500px;
-        height: 500px;
     }
 }
 
@@ -415,5 +415,16 @@
     }
     .personImage img {
         height: 250px;
+    }
+    .wh892 {
+        width: 490px;
+        height: 490px;
+    }
+}
+
+@media (max-width: 280px) {
+    .wh892 {
+        width: 475px;
+        height: 475px;
     }
 }
